@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LangGraph RAG Chat</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="chat-app">
+    <div class="hero-panel">
+      <div>
+        <p class="eyebrow">RAG Chat Interface</p>
+        <h1>Ask your documents anything.</h1>
+        <p class="hero-copy">Upload files, then ask questions with an intelligent search-backed assistant.</p>
+      </div>
+      <div class="hero-badge">Light mode · Upload first · Responsive chat</div>
+    </div>
+
+    <section class="upload-section">
+      <div class="section-heading">
+        <div>
+          <h2>Upload documents</h2>
+          <p>Select one or more files to upload and enable chat.</p>
+        </div>
+        <span class="status-pill" id="upload-status">No files uploaded yet.</span>
+      </div>
+      <form id="upload-form" class="upload-form">
+        <input id="file-input" type="file" multiple accept=".pdf,.docx,.txt" />
+        <button type="submit">Upload files</button>
+      </form>
+      <div class="instruction-box">
+        <strong>Note:</strong> Upload at least one document before asking a question.
+      </div>
+    </section>
+
+    <section class="chat-window" id="chat-window">
+    </section>
+
+    <form id="chat-form" class="chat-form">
+      <textarea id="query-input" placeholder="Ask something..." rows="2" disabled></textarea>
+      <button id="send-button" type="submit" disabled>Send</button>
+    </form>
+
+    <div class="footer-note">
+      <span>Endpoint: <code>POST /query</code></span>
+    </div>
+  </div>
+
+  <script src="/static/chat.js"></script>
+</body>
+</html>
