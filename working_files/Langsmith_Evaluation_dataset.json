@@ -1,0 +1,22 @@
+[
+    {
+        "inputs": {"question": "What is Retrieval-Augmented Generation (RAG)?"},
+        "outputs": {"answer": "RAG is a technique that augments language models with inference-time access to external data sources, allowing them to retrieve relevant information before generating responses."}
+    },
+    {
+        "inputs": {"question": "Why is retrieval important in RAG systems?"},
+        "outputs": {"answer": "Retrieval is important because language models do not have direct access to current or private documentation and may generate inaccurate answers without relevant source material."}
+    },
+    {
+        "inputs": {"question": "What are the four main indexing steps in a RAG pipeline?"},
+        "outputs": {"answer": "The four indexing steps are loading documents, splitting documents into chunks, generating embeddings, and storing the embeddings and chunks in a vector store."}
+    },
+    {
+        "inputs": {"question": "What is the purpose of document chunking?"},
+        "outputs": {"answer": "Document chunking breaks large documents into smaller sections that are easier to embed, store, search, and fit within a model's context window."}
+    },
+    {
+        "inputs": {"question": "Which text splitter is recommended for generic text processing?"},
+        "outputs": {"answer": "RecursiveCharacterTextSplitter is the recommended text splitter for generic text use cases."}
+    }
+]
